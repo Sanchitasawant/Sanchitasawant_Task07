@@ -1,8 +1,6 @@
-This project is a simple Laundry Service landing page built using HTML and CSS. 
-It includes a responsive navigation bar with a logo, navigation links, and a 
-username section. The hero section contains a heading, a short description, a 
-call-to-action button, and a laundry-related image. The layout is created using 
-CSS display: inline-block without using Flexbox, as required by the assignment.
+This project is a responsive Laundry Service landing page created using HTML and
+CSS. The page includes a navigation bar with a logo, menu links, and a username 
+section. It also contains a hero section with a heading, description, button, and an image.Media queries are used to make the webpage responsive for desktop, tablet, and mobile screen sizes.
 
 How to Run
 1. Download or clone the project.
