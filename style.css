@@ -8,8 +8,6 @@ body{
     font-family:Arial, Helvetica, sans-serif;
 }
 
-/* Navbar */
-
 .navbar{
     width:100%;
     display:flex;
@@ -47,8 +45,6 @@ body{
     font-weight:bold;
 }
 
-/* Hero */
-
 .hero{
     display:flex;
     justify-content:space-between;
@@ -58,8 +54,7 @@ body{
     gap:40px;
 }
 
-.left,
-.right{
+.left,.right{
     width:50%;
 }
 
@@ -105,10 +100,6 @@ body{
     width:500px;
     max-width:100%;
 }
-
-/* ===========================
-   Tablet
-=========================== */
 
 @media screen and (max-width:768px){
 
@@ -157,10 +148,6 @@ body{
     }
 
 }
-
-/* ===========================
-   Mobile
-=========================== */
 
 @media screen and (max-width:480px){
 
