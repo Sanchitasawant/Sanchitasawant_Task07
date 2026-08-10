@@ -1,205 +1,259 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+/* I used these values for the two screen sizes I tested */
+:root {
+    --tablet-size: 768px;
+    --mobile-size: 480px;
 }
 
-body{
-    font-family:Arial, Helvetica, sans-serif;
+/* Starting with basic spacing reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.navbar{
-    width:100%;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:20px 50px;
-    background:#fff;
+body {
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-.logo img{
-    width:90px;
+
+/* ================= DESKTOP ================= */
+
+/* First I made the navbar in one row using flexbox */
+
+.navbar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 50px;
 }
 
-.menu{
-    display:flex;
-    gap:35px;
+.logo img {
+    width: 90px;
 }
 
-.menu a{
-    text-decoration:none;
-    color:#777;
-    font-size:30px;
+
+/* Navigation links stay in a row on desktop */
+
+.menu {
+    display: flex;
+    gap: 30px;
 }
 
-.menu a:hover{
-    color:#0099ff;
+.menu a {
+    text-decoration: none;
+    color: #777;
+    font-size: 18px;
 }
 
-.username span{
-    background:#eaf4ff;
-    color:#4aa3ff;
-    padding:12px 18px;
-    border-radius:10px;
-    font-size:30px;
-    font-weight:bold;
+.menu a:hover {
+    color: #0099ff;
 }
 
-.hero{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    min-height:calc(100vh - 80px);
-    padding:40px 70px;
-    gap:40px;
+
+/* Username section */
+
+.username span {
+    background-color: #eaf4ff;
+    color: #4aa3ff;
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-size: 16px;
 }
 
-.left,.right{
-    width:50%;
+
+/* Hero is also a flex container on a large screen */
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: calc(100vh - 100px);
+    padding: 40px 70px;
+    gap: 40px;
 }
 
-.left h1{
-    font-size:55px;
-    color:#374151;
-    line-height:1.2;
-    margin-bottom:20px;
+
+/* I started by giving both sides equal space */
+
+.left,
+.right {
+    width: 50%;
 }
 
-.left span{
-    color:#0099ff;
+
+.left h1 {
+    font-size: 50px;
+    color: #374151;
+    line-height: 1.2;
+    margin-bottom: 20px;
 }
 
-.left p{
-    width:80%;
-    font-size:20px;
-    color:#777;
-    line-height:1.6;
-    margin-bottom:35px;
+.left h1 span {
+    color: #0099ff;
 }
 
-.left button{
-    background:#0099ff;
-    color:#fff;
-    border:none;
-    padding:18px 35px;
-    border-radius:12px;
-    font-size:18px;
-    cursor:pointer;
+.left p {
+    width: 80%;
+    color: #777;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 30px;
 }
 
-.left button:hover{
-    background:#0077cc;
+
+.left button {
+    background-color: #0099ff;
+    color: white;
+    border: none;
+    padding: 15px 25px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
 }
 
-.right{
-    display:flex;
-    justify-content:center;
+.left button:hover {
+    background-color: #0077cc;
 }
 
-.right img{
-    width:500px;
-    max-width:100%;
+
+/* I used flexbox here to keep the image centered */
+
+.right {
+    display: flex;
+    justify-content: center;
 }
 
-@media screen and (max-width:768px){
+.right img {
+    width: 500px;
+    max-width: 100%;
+}
 
-    .navbar{
-        padding:15px 25px;
+
+/* ================= TABLET ================= */
+
+/*
+   I tested the layout at around 768px.
+
+   The desktop text and spacing looked too large,
+   so I reduced sizes but kept the hero in a row.
+*/
+
+@media screen and (max-width: 768px) {
+
+    .navbar {
+        padding: 15px 25px;
     }
 
-    .logo img{
-        width:70px;
+    .logo img {
+        width: 70px;
     }
 
-    .menu{
-        gap:15px;
+    .menu {
+        gap: 15px;
     }
 
-    .menu a{
-        font-size:15px;
+    .menu a {
+        font-size: 15px;
     }
 
-    .username span{
-        font-size:14px;
-        padding:8px 12px;
+    .username span {
+        font-size: 14px;
+        padding: 8px 12px;
     }
 
-    .hero{
-        padding:30px;
-        gap:20px;
+    .hero {
+        padding: 30px;
+        gap: 20px;
     }
 
-    .left h1{
-        font-size:38px;
+    .left h1 {
+        font-size: 38px;
     }
 
-    .left p{
-        width:100%;
-        font-size:16px;
+    .left p {
+        width: 100%;
+        font-size: 16px;
     }
 
-    .left button{
-        font-size:15px;
-        padding:12px 24px;
+    .left button {
+        padding: 12px 20px;
+        font-size: 15px;
     }
 
-    .right img{
-        width:280px;
+    .right img {
+        width: 280px;
     }
-
 }
 
-@media screen and (max-width:480px){
 
-    .navbar{
-        padding:15px;
+/* ================= MOBILE ================= */
+
+/*
+   At smaller widths, the text and image became
+   too narrow when they were next to each other.
+
+   So I changed flex-direction from row to column.
+*/
+
+@media screen and (max-width: 480px) {
+
+    .navbar {
+        padding: 15px;
     }
 
-    .menu{
-        display:none;
+
+    /* There is not enough space for all menu links */
+
+    .menu {
+        display: none;
     }
 
-    .logo img{
-        width:60px;
+    .logo img {
+        width: 60px;
     }
 
-    .username span{
-        font-size:11px;
-        padding:6px 10px;
+    .username span {
+        font-size: 11px;
+        padding: 6px 10px;
     }
 
-    .hero{
-        flex-direction:column;
-        align-items:flex-start;
-        padding:20px;
-        gap:25px;
+
+    /* Stack text and image vertically */
+
+    .hero {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+        gap: 25px;
     }
 
     .left,
-    .right{
-        width:100%;
+    .right {
+        width: 100%;
     }
 
-    .left h1{
-        font-size:32px;
+    .left h1 {
+        font-size: 32px;
     }
 
-    .left p{
-        width:100%;
-        font-size:15px;
+    .left p {
+        width: 100%;
+        font-size: 15px;
     }
 
-    .left button{
-        font-size:14px;
-        padding:12px 20px;
+    .left button {
+        padding: 12px 20px;
+        font-size: 14px;
     }
 
-    .right{
-        justify-content:center;
+    .right {
+        justify-content: center;
     }
 
-    .right img{
-        width:220px;
+    .right img {
+        width: 220px;
     }
-
 }
+
